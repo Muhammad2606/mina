@@ -1,0 +1,317 @@
+@import "./_global";
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400&family=Lato:ital,wght@0,300;1,300&family=Lora:ital,wght@0,500;1,500&family=Montserrat:ital@0;1&family=Playfair+Display:ital,wght@0,600;1,500&family=Roboto:ital@0;1&display=swap");
+
+:root {
+  --dosis: "Dosis", sans-serif;
+  --lato: "Lato", sans-serif;
+  --lora: "Lora", serif;
+  --monster: "Montserrat", sans-serif;
+  --playfair: "Playfair Display", serif;
+  --roboto: "Roboto", sans-serif;
+}
+
+@mixin card($bgColor) {
+  width: 100%;
+  padding: 2rem 0;
+  background-color: $bgColor;
+}
+@mixin content($gtc) {
+  display: grid;
+  grid-template-columns: $gtc;
+  gap: 3rem;
+  align-items: center;
+}
+@mixin title() {
+  text-align: center;
+  font-family: var(--playfair);
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@mixin btn() {
+  background-color: black;
+  color: white;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  font-family: var(--lora);
+  border: 0;
+  transition: all 0.5s linear;
+  &:hover {
+    background-color: orange;
+    color: white;
+    border: 0;
+  }
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background-color: rgb(56, 54, 54);
+  }
+}
+
+.navigation {
+  width: 100%;
+  height: 12vh;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+
+    left: 0;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background-color: rgb(56, 54, 54);
+    z-index: 1;
+  }
+  .navbar {
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar__logo {
+      z-index: 99;
+    }
+    .navbar__nav {
+      .active {
+        background-color: rgb(56, 54, 54);
+        padding: 5px 15px;
+        color: white;
+      }
+      a {
+        margin-left: 15px;
+        color: black;
+        font-size: 1.3rem;
+        font-family: var(--lora);
+        padding: 5px 15px;
+        transition: all 0.2s linear;
+        &:hover {
+          background-color: rgb(56, 54, 54);
+          padding: 5px 15px;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .navbar__icon {
+    i {
+      margin-left: 15px;
+      font-size: 1rem;
+      background-color: black;
+      color: white;
+      padding: 10px 10px;
+      border-radius: 100%;
+      transition: all 0.5s linear;
+    }
+  }
+}
+
+.header__content {
+  @include content(repeat(2, 1fr));
+  .header__item {
+    z-index: 9999;
+    h1 {
+      font-family: var(--lora);
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-family: var(--monster);
+      margin-bottom: 2rem;
+    }
+    button {
+      @include btn();
+    }
+  }
+}
+
+.what {
+  @include card(white);
+  .title {
+    @include title();
+  }
+}
+
+.what__content {
+  @include content(repeat(4, 1fr));
+  padding-bottom: 10rem;
+  background-image: url(/img/slin.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  .what__item {
+    text-align: center;
+    .what__card {
+      margin: 0 auto;
+      border-radius: 100%;
+      border: 1px solid black;
+      overflow: hidden;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 120px;
+        height: 100px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.about {
+  @include card(#fff);
+  background-image: url(/img/slin2.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+.about__content {
+  @include content(repeat(2, 1fr));
+  padding: 2rem 0;
+  .about__item {
+    overflow: hidden;
+    h2 {
+      font-size: 2rem;
+      font-family: var(--dosis);
+    }
+    button {
+      @include btn();
+      margin-top: 2rem;
+    }
+    img {
+      transition: all 0.5s linear;
+    }
+    &:hover img {
+      transform: scale(1.5);
+    }
+  }
+}
+
+.pricing {
+  @include card(#fff);
+  .title {
+    @include title();
+  }
+}
+
+.pricing__content {
+  @include content(repeat(3, 1fr));
+  .pricing__item {
+    text-align: center;
+    padding: 2rem 8.5rem;
+    border: 1px solid black;
+    h2 {
+      font-size: 2rem;
+      font-family: var(--lora);
+      margin-bottom: 1rem;
+      span {
+        font-size: 1rem;
+      }
+    }
+    h3 {
+      font-family: var(--dosis);
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-family: var(--playfair);
+      margin-bottom: 1rem;
+    }
+    button {
+      @include btn();
+    }
+  }
+}
+
+.meet {
+  @include card(#fff);
+  padding: 4rem 0;
+  background-image: url(/img/slin2.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  text-align: center;
+  .title {
+    @include title();
+  }
+  button {
+    @include btn();
+  }
+}
+
+.meet__content {
+  @include content(repeat(3, 1fr));
+
+  .meet__item {
+    .img {
+      border: 40px solid grey;
+      transition: all 0.5s linear;
+      &:hover {
+        border: 40px solid black;
+      }
+    }
+    .title {
+      h2 {
+        font-size: 1.5rem;
+      }
+      p {
+        margin: 0 auto;
+        font-size: 1.2rem;
+        width: 40%;
+      }
+    }
+  }
+}
+
+
+.contact{
+  @include card(#fff);
+  .title{
+    @include title();
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+    gap: 1rem;
+    text-align: center;
+    input{
+      height: 7vh;
+      font-size: 1.3rem;
+      text-indent: 10px;
+    }
+    textarea{
+         height: 12vh;
+      font-size: 1.3rem;
+      text-indent: 10px;
+    }
+    button{
+      @include btn();
+      width: 20%;
+      margin: 0 auto;
+    }
+  }
+}
+.map{
+  width: 100%;
+  height: 60vh;
+  iframe{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
