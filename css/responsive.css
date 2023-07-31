@@ -1,0 +1,41 @@
+@media only screen and (max-width: 768px) {
+  .navigation .navbar .navbar__nav a {
+    display: none;
+  }
+  .navigation .navbar__icon i {
+    display: none;
+  }
+  .header__content {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 2rem;
+  }
+  .navigation:after {
+    width: 45%;
+  }
+  .header:after {
+    width: 40%;
+    height: 60vh;
+  }
+  .header__content .header__item h1 {
+    font-size: 2rem;
+  }
+  .what__content, .about__content, .pricing__content, .meet__content, .footer__header, .footer__content {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 2rem;
+  }
+  .meet__content .meet__item .title p {
+    width: 100%;
+  }
+  .contact form {
+    width: 100%;
+  }
+  .footer__content .footer__item p {
+    text-align: center;
+  }
+  .navigation .navbar .navbar__nav .fa-bars {
+    display: block;
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=responsive.css.map */

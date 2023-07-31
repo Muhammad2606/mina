@@ -71,6 +71,10 @@ img {
 .navigation .navbar .navbar__logo {
   z-index: 99;
 }
+.navigation .navbar .navbar__nav .fa-bars {
+  font-size: 1.5rem;
+  display: none;
+}
 .navigation .navbar .navbar__nav .active {
   background-color: rgb(56, 54, 54);
   padding: 5px 15px;
@@ -104,6 +108,7 @@ img {
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
   align-items: center;
+  margin-bottom: 1rem;
 }
 .header__content .header__item {
   z-index: 9999;
@@ -150,6 +155,7 @@ img {
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
   align-items: center;
+  margin-bottom: 1rem;
   padding-bottom: 10rem;
   background-image: url(/img/slin.png);
   background-repeat: no-repeat;
@@ -188,6 +194,7 @@ img {
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
   align-items: center;
+  margin-bottom: 1rem;
   padding: 2rem 0;
 }
 .about__content .about__item {
@@ -237,6 +244,7 @@ img {
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   align-items: center;
+  margin-bottom: 1rem;
 }
 .pricing__content .pricing__item {
   text-align: center;
@@ -312,6 +320,7 @@ img {
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   align-items: center;
+  margin-bottom: 1rem;
 }
 .meet__content .meet__item .img {
   border: 40px solid grey;
@@ -383,4 +392,81 @@ img {
 .map iframe {
   width: 100%;
   height: 100%;
+}
+
+.footer {
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #141414;
+}
+
+.footer__header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fff;
+  font-family: var(--lora);
+  font-size: 1.3rem;
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  align-items: flex-start;
+  color: #fff;
+}
+.footer__content .footer__item {
+  margin-top: 2rem;
+  text-align: center;
+}
+.footer__content .footer__item h2 {
+  font-family: var(--monster);
+  margin-bottom: 1rem;
+}
+.footer__content .footer__item p {
+  font-family: var(--lato);
+  text-align: left;
+}
+.footer__content .footer__item a {
+  display: block;
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: var(--lato);
+  transition: all 0.2s linear;
+}
+.footer__content .footer__item a:hover {
+  color: rgb(227, 194, 93);
+}
+.footer__content .footer__item form {
+  display: flex;
+  background-color: #fff;
+  height: 5vh;
+  margin-bottom: 1rem;
+}
+.footer__content .footer__item form input {
+  width: 90%;
+  border: 0;
+  outline: 0;
+  text-indent: 10px;
+  font-size: 1.2rem;
+}
+.footer__content .footer__item form button {
+  width: 10%;
+  color: #fff;
+  background-color: #fd7404;
+}
+
+.copyRight {
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: var(--dosis);
 }/*# sourceMappingURL=style.css.map */
